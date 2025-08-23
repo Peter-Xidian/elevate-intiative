@@ -1,0 +1,289 @@
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*===== Colors =====*/
+  --soft-white: #fbfaf5;
+  --soft-black: #181a18;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --txt-grey: #444950;
+  --th-eg: #6b8e23;
+  --th-brn: #8b4513;
+  --th-bge: #d2b48c;
+  --th-grn: #477035;
+  --cannoli-cream: #f1f0e2;
+  --the-grey: #f6f7f9;
+  --success: #13ae8f;
+  --error: #ff3333;
+
+  /*===== Font and typography =====*/
+  /* --laini-font: */
+  --pri-font: "Lora", serif;
+  --pop-font: "Poppins", sans-serif;
+  --nun-font: "Nunito", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --fs-9: 9rem;
+  --fs-8-5: 8.5rem;
+  --fs-8: 8rem;
+  --fs-7-5: 7.5rem;
+  --fs-7: 7rem;
+  --fs-6-5: 6.5rem;
+  --fs-6: 6rem;
+  --fs-5-5: 5.5rem;
+  --fs-5: 5rem;
+  --fs-4-5: 4.5rem;
+  --fs-4: 4rem;
+  --fs-3-5: 3.5rem;
+  --fs-3: 3rem;
+  --fs-2-5: 2.5rem;
+  --fs-2: 2rem;
+  --fs-1-5: 1.5rem;
+  --fs-1: 1rem;
+  --fs-0-95: 0.95rem;
+  --fs-0-85: 0.85rem;
+  --fs-0-75: 0.75rem;
+  --fs-0-65: 0.65rem;
+  --fs-0-5: 0.5rem;
+  --fs-0-25: 0.275rem;
+  --fs-0-2: 0.2rem;
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*===== Margenes Bottom =====*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-3-5: 3rem;
+  --mb-4: 4rem;
+  --mb-4-5: 4.5rem;
+  --mb-5: 5rem;
+  --mb-5-5: 5.5rem;
+  --mb-6: 6rem;
+  --mb-6-5: 6.5rem;
+  --mb-7: 7rem;
+  --mb-7-5: 7.5rem;
+  --mb-8: 8rem;
+  --mb-8-5: 8.5rem;
+  --mb-9: 9rem;
+  --mb-9-5: 9.5rem;
+  --mb-10: 10rem;
+}
+
+/* --------------- ========== LP-MAIN ========== ---------------*/
+.lp-main {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*========== >>>>> HERO SECTION <<<<< ==========*/
+.hero {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--soft-black);
+  background-image: url(/assets/gifs/g-2.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.h-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: var(--mb-2);
+  padding-bottom: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+  row-gap: var(--mb-2);
+}
+
+.h-content {
+  width: 500px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* align-self: flex-end; */
+  display: none;
+}
+
+.h-content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: left;
+  color: var(--white);
+  /* line-height: 1.4; */
+}
+
+.h-content p span {
+  font-family: var(--pri-font);
+  color: var(--th-eg);
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.h-content button > p {
+  flex: 0 0 auto;
+}
+
+.h-title {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 1px red solid; */
+  overflow: hidden;
+}
+
+.h-title h1 {
+  font-size: 20vw;
+  color: var(--white);
+  text-align: left;
+  font-weight: 300;
+  line-height: 0.9;
+  margin-bottom: -3.5rem;
+}
+
+.h-title h1 span {
+  color: var(--th-bge);
+}
+
+/*========== >>>>> ABOUT SECTION <<<<< ==========*/
+.ab {
+  width: 100%;
+  padding: var(--mb-6) var(--mb-4);
+}
+
+.ab-container {
+  width: 100%;
+  justify-content: flex-start;
+  row-gap: var(--mb-6);
+}
+
+.ab-title {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.abt-img {
+  flex: 0 0 13%;
+  /* border: 1px red solid; */
+  overflow: hidden;
+}
+
+.abt-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.abt-data {
+  flex: 0 0 65%;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.abt-data h3 {
+  font-size: var(--fs-1-5);
+  font-weight: 300;
+  font-family: var(--pop-font);
+}
+
+.abt-data h3 span {
+  color: var(--th-brn);
+}
+
+.ab-body {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.ab-stats {
+  flex: 0 0 65%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.abs {
+  position: relative;
+  flex: 0 0 30%;
+  height: 300px;
+  padding: var(--mb-1-5);
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fafafa;
+  background-color: rgb(107, 142, 35, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.abs-no {
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* border: 1px teal solid; */
+}
+
+.abs-no h5 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: var(--pop-font);
+  text-align: left;
+  color: var(--txt-grey);
+  line-height: 0.9;
+}
+
+.abs-no span {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: var(--th-grn);
+}
+
+.abs-text {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.abs-text p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+  color: var(--txt-grey);
+}
+
+.abs-svg {
+  position: absolute;
+  top: -1.85rem;
+  right: -1.15rem;
+  z-index: 0;
+}
+
+.abs-svg p {
+  font-size: var(--fs-4-5);
+  font-weight: 500;
+  text-align: left;
+  color: var(--txt-grey);
+  opacity: 0.1;
+}
+
+/*===== MEDIA QUERIES =====*/
+/* Media query for screens with a maximum width of 500px */
+@media screen and (max-width: 500px) {
+}
+
+/* Media query for screens with a minimum width of 1440px and a maximum width of 1600px */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+}
+
+/* Media query for screens with a minimum width of 1650px */
+@media screen and (min-width: 1650px) {
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+}

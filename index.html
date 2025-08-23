@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Elevate Initiative</title>
+  </head>
+  <body>
+    <!-- ========== <<<<< [HEADER] >>>>> ========== -->
+    <header class="flex-center header">
+      <nav class="flex-center nav">
+        <div class="flex-center nav-header">
+          <a href="" class="flex-center nh-logo">
+            <img src="assets/img/brand/emb-clr.png" alt="" loading="lazy" />
+          </a>
+
+          <div class="flex-col nh-open">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <ul class="flex-center nav-menu">
+          <li class="flex-center nml"><a href="">Home</a> <span></span></li>
+          <li class="flex-center nml">
+            <a href="">Our Story</a> <span></span>
+          </li>
+          <li class="flex-center nml">
+            <a href="">Our Offerings</a> <span></span>
+          </li>
+          <li class="flex-center nml"><a href="">Contact</a> <span></span></li>
+        </ul>
+
+        <div class="flex-center nav-contact">
+          <div class="flex-center nc-socials">
+            <a href="" target="_blank">instagram</a>
+            <a href="" target="_blank">linkedin</a>
+          </div>
+
+          <a href="" class="nc-email" target="_blank"
+            >elevatethroughcoffee@gmail.com</a
+          >
+        </div>
+      </nav>
+
+      <div class="flex-center nav-btn">
+        <button class="flex-center pri-btn">
+          <p>Get Involved</p>
+          <span class="material-symbols-outlined"> arrow_outward </span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========== <<<<< [MAIN] >>>>> ========== -->
+    <main class="lp-main">
+      <!-- ===== HERO SECTION ===== -->
+      <section class="flex-center hero">
+        <div class="flex-col h-container">
+          <div class="flex-center h-content">
+            <p>
+              Elevate Initiative is a
+              <span>sustainability-focused</span> initiative on uplifting women
+              coffee farmers and nurturing the next generation in the Rwandan
+              coffee industry.
+            </p>
+          </div>
+
+          <div class="flex-col h-title">
+            <h1 data-aos="fade-down">
+              elevate <br />
+              <span>initiative</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="flex-center ab">
+        <div class="flex-col ab-container">
+          <div class="flex-center ab-title">
+            <div class="flex-center abt-img">
+              <img src="assets/img/brand/emb-clr-2.png" alt="" loading="lazy" />
+            </div>
+
+            <div class="flex-center abt-data">
+              <h3>
+                Through a holistic approach, Elevate Through Coffee aims to
+                enhance sustainable livelihoods by
+                <span
+                  >providing women farmers with essential professional training,
+                  fair market access, and economic independence.</span
+                >
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex-center ab-body">
+            <div class="flex-center ab-stats">
+              <div class="flex-col abs">
+                <div class="flex-center abs-no">
+                  <h5 class="count" data-target="85">0</h5>
+                  <span class="abs-span">+</span>
+                </div>
+
+                <div class="flex-center abs-text">
+                  <p>Lorem ipsum dolor sit amet consectetur odit</p>
+                </div>
+
+                <div class="flex-center abs-svg">
+                  <p>85+</p>
+                </div>
+              </div>
+
+              <div class="flex-col abs">
+                <div class="flex-center abs-no">
+                  <h5 class="count" data-target="75">0</h5>
+                  <span class="abs-span">M+</span>
+                </div>
+
+                <div class="flex-center abs-text">
+                  <p>Lorem ipsum dolor sit amet consectetur odit</p>
+                </div>
+
+                <div class="flex-center abs-svg">
+                  <p>75M+</p>
+                </div>
+              </div>
+
+              <div class="flex-col abs">
+                <div class="flex-center abs-no">
+                  <h5 class="count" data-target="93">0</h5>
+                  <span class="abs-span">%</span>
+                </div>
+
+                <div class="flex-center abs-text">
+                  <p>Lorem ipsum dolor sit amet consectetur odit</p>
+                </div>
+
+                <div class="flex-center abs-svg">
+                  <p>93%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== <<<<< [FOOTER] >>>>> ========== -->
+    <footer class="flex-center footer"></footer>
+
+    <!-- ========== SCRIPT ========== -->
+    <script src="assets/js/index.js"></script>
+
+    <!-- ANIMATED STATS (NUMBERS)  -->
+    <script>
+      function animateCount(element, target, duration) {
+        const fps = 60;
+        const frameDuration = 1000 / fps;
+        const totalFrames = duration / frameDuration;
+        const increment = target / totalFrames;
+
+        let currentCount = 0;
+        let frame = 0;
+
+        function updateCount() {
+          currentCount += increment;
+          element.textContent = Math.round(currentCount);
+
+          frame++;
+          if (frame < totalFrames) {
+            requestAnimationFrame(updateCount);
+          } else {
+            element.textContent = target;
+          }
+        }
+
+        updateCount();
+      }
+
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const countElement = entry.target.querySelector(".count");
+            const targetCount = parseInt(
+              countElement.getAttribute("data-target")
+            );
+            animateCount(countElement, targetCount, 6000); // Adjust duration as needed
+          } else {
+            // Reset the counter when scrolling out of the view
+            const countElement = entry.target.querySelector(".count");
+            countElement.textContent = 0;
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const aStatsContainer = document.querySelector(".ab-stats");
+        const countElements = document.querySelectorAll(".count");
+        const observer = new IntersectionObserver(handleIntersection, {
+          threshold: 0,
+        });
+
+        observer.observe(aStatsContainer);
+        countElements.forEach(function (element) {
+          observer.observe(element.closest(".flex-center"));
+        });
+      });
+    </script>
+
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2200,
+        anchor: "center center",
+      });
+
+      window.addEventListener("load", AOS.refresh);
+    </script>
+
+    <script>
+      // JavaScript function to open the link in a new tab
+      function redirectToLink(url) {
+        window.open(url, "_blank"); // Open the specified URL in a new tab
+      }
+    </script>
+  </body>
+</html>
