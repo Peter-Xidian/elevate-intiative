@@ -149,6 +149,7 @@
   font-weight: 300;
   line-height: 0.9;
   margin-bottom: -3.5rem;
+  font-family: var(--pri-font);
 }
 
 .h-title h1 span {
@@ -213,13 +214,13 @@
 
 .abs {
   position: relative;
-  flex: 0 0 30%;
+  flex: 0 0 32%;
   height: 300px;
   padding: var(--mb-1-5);
   justify-content: space-between;
   align-items: flex-start;
   background-color: #fafafa;
-  background-color: rgb(107, 142, 35, 0.05);
+  /* background-color: rgb(107, 142, 35, 0.05); */
   border-radius: 5px;
   overflow: hidden;
 }
@@ -231,7 +232,7 @@
 }
 
 .abs-no h5 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   font-family: var(--pop-font);
   text-align: left;
@@ -259,7 +260,7 @@
 
 .abs-svg {
   position: absolute;
-  top: -1.85rem;
+  top: -1.65rem;
   right: -1.15rem;
   z-index: 0;
 }
@@ -268,8 +269,110 @@
   font-size: var(--fs-4-5);
   font-weight: 500;
   text-align: left;
-  color: var(--txt-grey);
+  color: var(--th-eg);
   opacity: 0.1;
+}
+
+.ab-quote {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ab-quote h4,
+.ab-quote p {
+  font-size: var(--fs-3);
+  font-weight: 300;
+  text-align: left;
+  color: var(--th-brn);
+  line-height: 1.3;
+}
+
+.ab-quote p {
+  color: var(--th-eg);
+}
+
+/*========== >>>>> IMPACT SECTION <<<<< ==========*/
+.im {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--th-bge);
+  background-image: url(/assets/img/bckg/bg-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.im-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(3px); */
+  justify-content: flex-start;
+  padding: var(--mb-4) var(--mb-2);
+}
+
+.im-img {
+  flex: 0 0 50%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  /* border-radius: 5px; */
+}
+
+.im-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 50%;
+}
+
+.im-content {
+  flex: 0 0 45%;
+  height: 100%;
+  background-image: url(/assets/img/patterns/pt-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.im-data {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.95);
+  /* border-radius: 5px; */
+  padding: var(--mb-3);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.im-data h3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: var(--pop-font);
+  text-align: left;
+  color: var(--txt-grey);
+  color: var(--th-brn);
+  line-height: 1.3;
+}
+
+.im-data h3 > span {
+  color: var(--th-eg);
+}
+
+.imd {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: var(--mb-2);
+}
+
+.imd > p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: left;
+  color: var(--txt-grey);
 }
 
 /*===== MEDIA QUERIES =====*/
