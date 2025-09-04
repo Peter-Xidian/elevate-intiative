@@ -200,12 +200,6 @@ select {
   font: inherit;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
 section {
   width: 100%;
   padding: var(--mb-6);
@@ -256,13 +250,13 @@ button {
 
 button > p {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 400;
+  border-radius: 30px;
   padding: var(--mb-0-75) var(--mb-1-5);
 }
 
 button > span {
-  padding: var(--mb-0-5);
-  background-color: var(--white);
+  padding: 0.5rem;
   border-radius: 50%;
 }
 
@@ -271,29 +265,68 @@ button:hover span {
 }
 
 .pri-btn,
-.alt-btn {
+.alt-btn,
+.sec-btn {
   background: transparent;
 }
 
 .pri-btn p {
-  background-color: var(--white);
-  border-radius: 30px;
-  color: var(--soft-black);
-}
-
-.pri-btn:hover p {
   background-color: var(--th-grn);
   color: var(--white);
 }
 
 .pri-btn span {
-  background-color: var(--th-bge);
-  color: var(--th-brn);
+  font-size: 1.6rem;
+  border: 2px var(--th-brn) solid;
+  color: var(--soft-black);
 }
 
 .pri-btn:hover span {
   background-color: var(--th-brn);
   color: var(--white);
+}
+
+.sec-btn p {
+  border: 2px var(--th-eg) solid;
+  color: var(--white);
+}
+
+.sec-btn:hover p {
+  background-color: var(--th-eg);
+  color: var(--white);
+}
+
+.sec-btn span {
+  font-size: 1.6rem;
+  border: 2px var(--th-eg) solid;
+  color: var(--white);
+}
+
+.sec-btn:hover span {
+  background-color: var(--th-brn);
+  color: var(--white);
+  border: 2px var(--th-brn) solid;
+}
+
+/*========== MEDIA (ANIMATIONS, TRNASITIONS AND SMOOTH SCROLL) ==========*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.icon-light {
+  font-variation-settings: "wght" 200;
+}
+
+.icon-regular {
+  font-variation-settings: "wght" 400;
+}
+
+.icon-bold {
+  font-variation-settings: "wght" 600;
+}
+
+.icon-fill {
+  font-variation-settings: "FILL" 1, "wght" 400;
 }
 
 /*========== MEDIA (ANIMATIONS, TRNASITIONS AND SMOOTH SCROLL) ==========*/
@@ -499,6 +532,139 @@ button:hover span {
 }
 
 /* ------ >>>>>> ========== FOOTER ========== <<<<<< ------ */
+.footer {
+  width: 100%;
+  background-color: var(--black);
+  background-image: url(/assets/img/patterns/pt-1-clr.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ft-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: var(--mb-4);
+  padding-bottom: var(--mb-2);
+  row-gap: var(--mb-2);
+}
+
+.ft-head {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.fth {
+  flex: 0 0 60%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: var(--mb-1-5);
+  /* border: 1px red solid; */
+}
+
+.fth img {
+  width: 200px;
+  object-fit: cover;
+  filter: invert();
+}
+
+.fth h1 {
+  font-size: 8.5vw;
+  color: var(--white);
+  text-align: left;
+  font-weight: 300;
+  line-height: 0.9;
+  font-family: var(--pri-font);
+}
+
+.fth h1 span {
+  color: var(--th-bge);
+}
+
+.fth p {
+  font-size: 0.95rem;
+  color: var(--white);
+  text-align: left;
+  font-weight: 300;
+}
+
+.fth-ul {
+  flex: 0 0 25%;
+  /* border: 1px teal solid; */
+  justify-content: flex-end;
+  align-items: flex-end;
+  row-gap: var(--mb-1);
+}
+
+.fth-li {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.fth-li a {
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: left;
+  color: var(--white);
+}
+
+.fth-li span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--th-brn);
+}
+
+.fth-li:hover span {
+  width: 100%;
+}
+
+.ft-tail {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: var(--mb-1-5);
+  border-top: 1px var(--th-bge) solid;
+}
+
+.ft-tail p,
+.ftts {
+  font-size: 0.85rem;
+  color: var(--white);
+  text-align: left;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.ft-tail p a {
+  font-size: 0.85rem;
+  color: var(--th-bge);
+}
+
+.ft-tail p a:hover {
+  opacity: 1;
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.ftt-socials {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  column-gap: var(--mb-0-75);
+}
+
+.ftts {
+  flex: 0 0 auto;
+}
+
+.ftts:hover {
+  opacity: 1;
+  color: var(--th-bge);
+}
 
 /*===== MEDIA QUERIES =====*/
 /* Media query for screens with a maximum width of 500px */

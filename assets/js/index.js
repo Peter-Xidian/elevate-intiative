@@ -53,87 +53,130 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/* ------------- LOADER MODAL && HERO [SCATTERED FLOATING IMAGE LAYOUT] ------------- */
-function animateFloatingImages() {
-  const images = document.querySelectorAll(".hm-img");
-
-  images.forEach((img, index) => {
-    img.style.opacity = 0;
-    img.style.transform = "scale(0.8)";
-    img.style.animation = "none";
-    void img.offsetWidth;
-
-    setTimeout(() => {
-      img.style.opacity = 1;
-      img.style.transform = "scale(1)";
-      img.style.animation = `floatWavy ${
-        8 + Math.random() * 5
-      }s ease-in-out infinite alternate`;
-    }, index * 300 + Math.random() * 300);
-  });
-}
-
-// Handle loader modal logic
-function handleLoaderModal() {
-  const modal = document.querySelector(".lm");
-  const logo = document.querySelector(".lmdi-img");
-  const button = document.querySelector(".lmd-btn");
-
-  const hasVisited = sessionStorage.getItem("hasVisited");
-
-  if (hasVisited) {
-    // User already visited
-    modal.style.display = "none";
-    animateFloatingImages(); // Start images immediately
-  } else {
-    // First time visitor
-    logo.style.opacity = 0;
-    button.style.opacity = 0;
-    modal.style.display = "flex";
-
-    // Fade in logo
-    setTimeout(() => {
-      logo.style.transition = "opacity 1s ease";
-      logo.style.opacity = 1;
-
-      // After logo fades in, fade in button
-      setTimeout(() => {
-        button.style.transition = "opacity 1s ease";
-        button.style.opacity = 1;
-      }, 2000); // 2 seconds after logo fully shown
-    }, 500); // 0.5s slight delay on page load
-
-    button.addEventListener("click", () => {
-      // Fade out modal
-      modal.style.transition = "opacity 1s ease";
-      modal.style.opacity = 0;
-
-      // After fade out ends, hide modal and start animations
-      setTimeout(() => {
-        modal.style.display = "none";
-        sessionStorage.setItem("hasVisited", "true"); // Set session flag
-        animateFloatingImages();
-      }, 1000); // Match fade out time
-    });
-  }
-}
-
-// Run on page load
+/*==================== RECENT PROJECTS CAROUSEL LOGIC ====================*/
 document.addEventListener("DOMContentLoaded", () => {
-  handleLoaderModal();
+  const carousel = document.querySelector("[data-carousel]");
+  const cards = [...carousel.children];
+  const prevBtn = document.getElementById("rnv-left");
+  const nextBtn = document.getElementById("rnv-right");
+
+  // ✅ Duplicate cards for infinite effect
+  carousel.append(...cards.map((card) => card.cloneNode(true)));
+
+  let cardWidth = cards[0].offsetWidth + 12; // includes gap
+  let currentIndex = 0;
+  let autoSlide;
+  let userInteracted = false;
+
+  // --- Helpers ---
+  function goToSlide(index, animate = true) {
+    if (!animate) {
+      carousel.style.transition = "none";
+    } else {
+      carousel.style.transition = "transform 0.6s ease";
+    }
+    carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    goToSlide(currentIndex);
+
+    if (currentIndex >= cards.length) {
+      setTimeout(() => {
+        currentIndex = 0;
+        goToSlide(currentIndex, false);
+      }, 600);
+    }
+  }
+
+  function prevSlide() {
+    if (currentIndex === 0) {
+      currentIndex = cards.length;
+      goToSlide(currentIndex, false);
+    }
+    setTimeout(() => {
+      currentIndex--;
+      goToSlide(currentIndex);
+    }, 20);
+  }
+
+  function startAutoPlay() {
+    autoSlide = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoPlay() {
+    clearInterval(autoSlide);
+  }
+
+  function userInteraction(action) {
+    stopAutoPlay();
+    action();
+    if (userInteracted) clearTimeout(userInteracted);
+    userInteracted = setTimeout(startAutoPlay, 5000);
+  }
+
+  // --- Navigation ---
+  nextBtn.addEventListener("click", () => userInteraction(nextSlide));
+  prevBtn.addEventListener("click", () => userInteraction(prevSlide));
+
+  // --- Drag/Swipe Support ---
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  function onDragStart(e) {
+    stopAutoPlay();
+    isDragging = true;
+    startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    carousel.style.transition = "none"; // stop transition while dragging
+  }
+
+  function onDragMove(e) {
+    if (!isDragging) return;
+    currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    const delta = currentX - startX;
+    const offset = -currentIndex * cardWidth + delta;
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+
+  function onDragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const delta = currentX - startX;
+
+    // threshold: 1/4 of card width
+    if (delta > cardWidth / 4) {
+      prevSlide();
+    } else if (delta < -cardWidth / 4) {
+      nextSlide();
+    } else {
+      goToSlide(currentIndex);
+    }
+
+    // resume autoplay after delay
+    if (userInteracted) clearTimeout(userInteracted);
+    userInteracted = setTimeout(startAutoPlay, 5000);
+  }
+
+  // Mouse events
+  carousel.addEventListener("mousedown", onDragStart);
+  window.addEventListener("mousemove", onDragMove);
+  window.addEventListener("mouseup", onDragEnd);
+
+  // Touch events
+  carousel.addEventListener("touchstart", onDragStart);
+  window.addEventListener("touchmove", onDragMove);
+  window.addEventListener("touchend", onDragEnd);
+
+  // --- Resize handling ---
+  window.addEventListener("resize", () => {
+    cardWidth = cards[0].offsetWidth + 12;
+    goToSlide(currentIndex, false);
+  });
+
+  // Init
+  goToSlide(0, false);
+  startAutoPlay();
 });
-
-// Re-run image animations smoothly on window resize
-let resizeTimeout;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    animateFloatingImages();
-  }, 500);
-});
-
-const isSmallScreen = window.innerWidth <= 500;
-
-img.style.animation = `floatWavy ${
-  isSmallScreen ? "8s" : "5s"
-} ease-in-out infinite`;
