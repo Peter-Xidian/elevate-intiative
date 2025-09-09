@@ -34,34 +34,64 @@
           <a href="" class="flex-center nh-logo">
             <img src="assets/img/brand/emb-clr.png" alt="" loading="lazy" />
           </a>
-
-          <div class="flex-col nh-open">
-            <span></span>
-            <span></span>
-          </div>
         </div>
 
-        <ul class="flex-center nav-menu">
-          <li class="flex-center nml"><a href="">Home</a> <span></span></li>
-          <li class="flex-center nml">
-            <a href="">Our Story</a> <span></span>
-          </li>
-          <li class="flex-center nml">
-            <a href="">Our Offerings</a> <span></span>
-          </li>
-          <li class="flex-center nml"><a href="">Contact</a> <span></span></li>
-        </ul>
+        <div class="flex-center nav-menu">
+          <div class="flex-center nm-head">
+            <a href="index.html" class="flex-center nmh-img"
+              ><img src="assets/img/brand/emb-clr-2.png" alt=""
+            /></a>
 
-        <div class="flex-center nav-contact">
-          <div class="flex-center nc-socials">
-            <a href="" target="_blank">instagram</a>
-            <a href="" target="_blank">linkedin</a>
+            <span
+              class="material-symbols-outlined icon-light"
+              id="nm-close"
+              onclick="toggleMenu()"
+            >
+              close
+            </span>
           </div>
 
-          <a href="" class="nc-email" target="_blank"
-            >elevatethroughcoffee@gmail.com</a
-          >
+          <ul class="flex-center nm-ul">
+            <li class="flex-center nml active">
+              <a href="">Home</a> <span></span>
+            </li>
+            <li class="flex-center nml">
+              <a href="">Our Story</a> <span></span>
+            </li>
+            <li class="flex-center nml">
+              <a href="">Our Offerings</a> <span></span>
+            </li>
+            <li class="flex-center nml">
+              <a href="">Contact</a> <span></span>
+            </li>
+          </ul>
+
+          <div class="flex-col nav-contact">
+            <div class="flex-center nc-socials">
+              <a href="" target="_blank">instagram</a>
+              <a href="" target="_blank">linkedin</a>
+            </div>
+
+            <a href="" class="flex-center nc-email" target="_blank"
+              >elevatethroughcoffee@gmail.com</a
+            >
+          </div>
+
+          <img
+            src="assets/img/patterns/pt-3.jpg"
+            alt=""
+            loading="lazy"
+            class="flex-center nm-svg"
+          />
         </div>
+
+        <span
+          class="material-symbols-outlined icon-light"
+          id="nm-open"
+          onclick="toggleMenu()"
+        >
+          drag_handle
+        </span>
       </nav>
 
       <div class="flex-center nav-btn">
@@ -88,8 +118,8 @@
             </p>
           </div>
 
-          <div class="flex-col h-title">
-            <h1 data-aos="fade-down">
+          <div class="flex-col h-title" data-aos="fade">
+            <h1>
               elevate <br />
               <span>initiative</span>
             </h1>
@@ -457,6 +487,30 @@
         </div>
       </section>
 
+      <!-- ===== CTA SECTION ===== -->
+      <section class="flex-center cta">
+        <div class="flex-center ct-container">
+          <div class="flex-center ct-card">
+            <div class="flex-col ctc">
+              <h3>Join Us in Making a <span>Difference</span></h3>
+
+              <p>
+                Your support can help change lives and transform communities.
+                Whether through donations, volunteering, or spreading awareness,
+                every action counts.
+              </p>
+
+              <button class="flex-center sec-btn">
+                <p>Get Involved</p>
+                <span class="material-symbols-outlined icon-light">
+                  arrow_outward
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===== FAQ SECTION ===== -->
       <section class="flex-center faq">
         <div class="flex-col fq-container" data-aos="fade">
@@ -566,30 +620,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ===== CTA SECTION ===== -->
-      <section class="flex-center cta">
-        <div class="flex-center ct-container">
-          <div class="flex-center ct-card">
-            <div class="flex-col ctc">
-              <h3>Join Us in Making a <span>Difference</span></h3>
-
-              <p>
-                Your support can help change lives and transform communities.
-                Whether through donations, volunteering, or spreading awareness,
-                every action counts.
-              </p>
-
-              <button class="flex-center sec-btn">
-                <p>Get Involved</p>
-                <span class="material-symbols-outlined icon-light">
-                  arrow_outward
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- ========== <<<<< [FOOTER] >>>>> ========== -->
@@ -607,12 +637,12 @@
               Nurturing Coffee Careers of the next generation in Rwanda.
             </p>
 
-            <button class="flex-center sec-btn">
+            <!-- <button class="flex-center sec-btn">
               <p>Get Involved</p>
               <span class="material-symbols-outlined icon-light">
                 arrow_outward
               </span>
-            </button>
+            </button> -->
           </div>
 
           <ul class="flex-col fth-ul">
@@ -647,6 +677,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- ========== <<<<< [MODALS] >>>>> ========== -->
+    <!-- ========== GET INVOLVED MODAL ========== -->
+    <section class="flex-center gi">
+      <div class="flex-center gi-container"></div>
+    </section>
 
     <!-- ========== SCRIPT ========== -->
     <script src="assets/js/index.js"></script>
@@ -711,8 +747,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 2200,
+        duration: 2000,
         anchor: "center center",
+        disable: "mobile",
       });
 
       window.addEventListener("load", AOS.refresh);
