@@ -438,7 +438,7 @@ button:hover span {
 /* ------ >>>>>> ========== HEADER ========== <<<<<< ------ */
 .header {
   position: fixed;
-  top: var(--mb-2);
+  top: var(--mb-1-5);
   left: 0;
   width: 100%;
   padding: 0 var(--mb-2);
@@ -473,7 +473,7 @@ button:hover span {
 }
 
 .nh-logo img {
-  width: 45px;
+  width: 50px;
   object-fit: cover;
   filter: invert();
 }
@@ -512,6 +512,10 @@ button:hover span {
   font-weight: 300;
   text-align: left;
   color: var(--white);
+}
+
+.ab-page .nml a {
+  color: var(--soft-black);
 }
 
 .nav.active .nml a {
@@ -898,8 +902,6 @@ button:hover span {
   }
 
   .nc-email:hover {
-    background-color: var(--th-brn);
-    color: var(--white);
     opacity: 1;
   }
 
