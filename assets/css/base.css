@@ -857,6 +857,10 @@ button:hover span {
     color: var(--white);
   }
 
+  .ab-page #nm-open {
+    color: var(--soft-black);
+  }
+
   .nav.active #nm-open {
     color: var(--soft-black);
   }
