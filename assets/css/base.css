@@ -560,7 +560,7 @@ button:hover span {
 
 .ft-container {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.88);
   padding: var(--mb-4);
   padding-bottom: var(--mb-2);
   row-gap: var(--mb-2);
