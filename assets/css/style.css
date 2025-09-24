@@ -1438,7 +1438,7 @@
   row-gap: var(--mb-2);
   padding: var(--mb-2);
   display: none;
-  animation: fade 0.3s ease-in-out;
+  animation: fadeY 0.3s ease-in-out;
 }
 
 .slw.default {
