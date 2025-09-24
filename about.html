@@ -615,10 +615,6 @@
       AOS.init({
         duration: 2000,
         anchor: "center center",
-        disable: function () {
-          let maxWidth = 500;
-          return window.innerWidth < maxWidth;
-        },
       });
 
       window.addEventListener("load", AOS.refresh);

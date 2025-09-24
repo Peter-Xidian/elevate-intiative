@@ -1727,10 +1727,11 @@
   }
 
   .h-title h1 {
-    font-size: 22.5vw;
+    font-size: 21vw;
     color: var(--white);
     text-align: center;
     margin-bottom: 0;
+    line-height: 1.1;
   }
 
   .h-title h1 span {
@@ -1795,6 +1796,7 @@
     width: 85%;
     height: 200px;
     padding: var(--mb-1-5);
+    align-items: center;
   }
 
   .abs-no {
@@ -1806,6 +1808,7 @@
   .abs-no h5 {
     font-size: 3rem;
     line-height: 0.9;
+    text-align: center;
   }
 
   .abs-no span {
@@ -1816,6 +1819,7 @@
   .abs-text p {
     font-size: 1rem;
     font-weight: 400;
+    text-align: center;
     line-height: 1.4;
   }
 
@@ -1960,8 +1964,8 @@
   }
 
   .sec img {
-    height: 300px;
-    border-radius: 30px;
+    height: 280px;
+    border-radius: 20px;
   }
 
   .sec p {
@@ -2129,7 +2133,7 @@
   } */
 
   .rec-data {
-    display: none;
+    display: flex;
   }
 
   .rec:hover .rec-data {
@@ -2354,6 +2358,7 @@
     margin-left: 0;
     margin-top: -3.5rem;
     overflow: hidden;
+    background-color: var(--soft-white);
   }
 
   .aem:first-child {
