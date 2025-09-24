@@ -1183,6 +1183,7 @@
   padding-right: var(--mb-6-5);
   background-color: var(--cannoli-cream);
   border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .aac:nth-child(2) {
@@ -2458,7 +2459,7 @@
     align-items: center;
     row-gap: var(--mb-1-5);
     z-index: 2;
-    border-radius: unset;
+    border-radius: 15px;
   }
 
   .aac:first-child {
@@ -2466,7 +2467,7 @@
     width: auto;
     height: auto;
     padding-right: var(--mb-2);
-    border-top-left-radius: unset;
+    border-radius: 15px;
   }
 
   .aac:nth-child(2) {
@@ -2478,7 +2479,7 @@
     margin-left: 0;
     z-index: 3;
     background-color: var(--the-grey);
-    border-radius: 0;
+    border-radius: 15px;
   }
 
   .aac:last-child {
@@ -2488,7 +2489,7 @@
     margin-left: 0;
     z-index: 4;
     background-color: var(--cannoli-cream);
-    border-radius: 0;
+    border-radius: 15px;
   }
 
   .aac > span {

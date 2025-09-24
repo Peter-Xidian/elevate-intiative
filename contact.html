@@ -116,7 +116,7 @@
       </nav>
 
       <div class="flex-center nav-btn">
-        <button class="flex-center pri-btn">
+        <button class="flex-center pri-btn" onclick="openModal()">
           <p>Get Involved</p>
           <span class="material-symbols-outlined icon-light">
             arrow_outward
@@ -231,7 +231,7 @@
                 every action counts.
               </p>
 
-              <button class="flex-center sec-btn">
+              <button class="flex-center sec-btn" onclick="openModal()">
                 <p>Get Involved</p>
                 <span class="material-symbols-outlined icon-light">
                   arrow_outward
@@ -254,7 +254,10 @@
                 guide to our programs and processes.
               </p>
 
-              <button class="flex-center pri-btn">
+              <button
+                class="flex-center pri-btn"
+                onclick="window.location.href='contact.html'"
+              >
                 <p>Contact Us</p>
                 <span class="material-symbols-outlined icon-light">
                   arrow_outward
@@ -384,7 +387,7 @@
               Nurturing Coffee Careers of the next generation in Rwanda.
             </p>
 
-            <!-- <button class="flex-center sec-btn">
+            <!-- <button class="flex-center sec-btn" onclick="openModal()">
               <p>Get Involved</p>
               <span class="material-symbols-outlined icon-light">
                 arrow_outward
@@ -428,7 +431,154 @@
     <!-- ========== <<<<< [MODALS] >>>>> ========== -->
     <!-- ========== GET INVOLVED MODAL ========== -->
     <section class="flex-center gi">
-      <div class="flex-center gi-container"></div>
+      <div class="flex-center gi-container">
+        <div class="flex-col gi-mode">
+          <span class="material-symbols-outlined" id="gi-close"> close </span>
+          <div class="flex-col gim-title">
+            <h3>We love to have <span>you here!</span></h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+              et in fugiat, sint ex minima.
+            </p>
+          </div>
+
+          <div class="flex-center gim gim-cards active">
+            <div class="flex-col gc donate">
+              <div class="flex-center gc-img">
+                <img
+                  src="assets/img/bckg/bg-donate-2.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="flex-col gc-data">
+                <h4>Donate 💸</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                  voluptate ex, nam nostrum modi fugiat.
+                </p>
+                <button class="flex-center pri-btn" onclick="">
+                  <p>Donate to our cause</p>
+                  <span class="material-symbols-outlined icon-light">
+                    arrow_outward
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex-col gc volunteer">
+              <div class="flex-center gc-img">
+                <img
+                  src="assets/img/bckg/bg-volunteer.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="flex-col gc-data">
+                <h4>Volunteer 🙏🏾</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                  voluptate ex, nam nostrum modi fugiat.
+                </p>
+
+                <button
+                  class="flex-center pri-btn"
+                  onclick="redirectToLink('https://wa.me/250784308175')"
+                >
+                  <p>Volunteer with us</p>
+                  <span class="material-symbols-outlined icon-light">
+                    arrow_outward
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col gim gi-details">
+            <div class="flex-center gid-action">
+              <span class="material-symbols-outlined icon-light">
+                keyboard_backspace
+              </span>
+              <p>Go Back</p>
+            </div>
+
+            <div class="flex-col gid bank">
+              <div class="flex-center gidb-title">
+                <h5>Bank Transfer Details</h5>
+              </div>
+
+              <div class="flex-col gidb-list">
+                <div class="flex-center gidbl">
+                  <span>Bank Name:</span>
+                  <p>Bank Name Here</p>
+                </div>
+
+                <div class="flex-center gidbl">
+                  <span>Bank Account No:</span>
+                  <p>XXXXXXXXXXX</p>
+                </div>
+
+                <div class="flex-center gidbl">
+                  <span>Bank Account Name:</span>
+                  <p>Account Name Here</p>
+                </div>
+
+                <div class="flex-center gidbl">
+                  <span>Bank Code:</span>
+                  <p>XXXX</p>
+                </div>
+
+                <div class="flex-center gidbl">
+                  <span>Swift Code:</span>
+                  <p>XXXXXXXX</p>
+                </div>
+
+                <div class="flex-center gidbl">
+                  <span>Bank Address:</span>
+                  <p>Bank Address Here</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-col gid momo">
+              <div class="flex-center gidm-title">
+                <h5>Mobile Money Transfer</h5>
+              </div>
+
+              <div class="flex-col gidm-list">
+                <div class="flex-center gidml">
+                  <span class="flex-center gidml-span">MTN Momo:</span>
+
+                  <p>
+                    <span><strong>Acct No:</strong> XXX XXX XXX XXX</span> -
+                    <span><strong>Acct Name:</strong> John Doe</span>
+                  </p>
+                </div>
+
+                <div class="flex-center gidml">
+                  <span class="flex-center gidml-span">Airtel Momo:</span>
+
+                  <p>
+                    <span><strong>Acct No:</strong> XXX XXX XXX XXX</span> -
+                    <span><strong>Acct Name:</strong> John Doe</span>
+                  </p>
+                </div>
+
+                <div class="flex-center gidml">
+                  <span class="flex-center gidml-span">Mpesa:</span>
+
+                  <p>
+                    <span><strong>Acct No:</strong> XXX XXX XXX XXX</span> -
+                    <span><strong>Acct Name:</strong> John Doe</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ========== SCRIPT ========== -->

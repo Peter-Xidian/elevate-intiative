@@ -338,3 +338,61 @@ document.addEventListener("DOMContentLoaded", () => {
   updateMeasurementsAndJumpTo(0);
   startAutoplay();
 });
+
+/*==================== GET INVOLVED MODAL (TOGGLING) LOGIC ====================*/
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the necessary elements
+  const giModal = document.querySelector(".gi");
+  const gimCards = document.querySelector(".gim.gim-cards");
+  const gimDetails = document.querySelector(".gim.gi-details");
+  const firstGc = document.querySelector(".gc.donate"); // First .gc element
+  const gidAction = document.querySelector(".gid-action"); // Go back button
+  const giClose = document.querySelector("#gi-close");
+
+  // Function to reset to default state
+  function resetToDefaultState() {
+    // Ensure cards are active and details are hidden
+    gimCards.classList.add("active");
+    gimDetails.classList.remove("active");
+    // Close the modal
+    giModal.classList.remove("active");
+  }
+
+  // Add click event to the first .gc element
+  if (firstGc) {
+    firstGc.addEventListener("click", function () {
+      // Remove active class from cards and add to details
+      gimCards.classList.remove("active");
+      gimDetails.classList.add("active");
+    });
+  }
+
+  // Add click event to the go back button
+  if (gidAction) {
+    gidAction.addEventListener("click", function () {
+      // Remove active class from details and add to cards
+      gimDetails.classList.remove("active");
+      gimCards.classList.add("active");
+    });
+  }
+
+  // Add click event to close button - reset to default state
+  if (giClose) {
+    giClose.addEventListener("click", resetToDefaultState);
+  }
+
+  // Optional: Also reset if user clicks outside the modal (if you have overlay)
+  if (giModal) {
+    giModal.addEventListener("click", function (e) {
+      // If click is on the modal backdrop (not the content)
+      if (e.target === giModal) {
+        resetToDefaultState();
+      }
+    });
+  }
+});
+
+function openModal() {
+  const giModal = document.querySelector(".gi");
+  giModal.classList.add("active");
+}
