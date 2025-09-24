@@ -1178,9 +1178,9 @@
 
 .aac:first-child {
   left: 0;
-  width: 430px;
+  width: 30vw;
   height: 450px;
-  padding-right: var(--mb-6-5);
+  padding-right: var(--mb-5);
   background-color: var(--cannoli-cream);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -1189,7 +1189,7 @@
 .aac:nth-child(2) {
   left: 59%;
   transform: translate(-50%, 0);
-  width: 450px;
+  width: 37vw;
   height: 580px;
   padding-right: var(--mb-7);
   margin-left: -6rem;
@@ -1201,7 +1201,7 @@
 
 .aac:last-child {
   right: 0;
-  width: 400px;
+  width: 32.5vw;
   height: 360px;
   margin-left: -10rem;
   z-index: 4;
@@ -2887,6 +2887,75 @@
 
 /* Media query for screens with a minimum width of 1650px */
 @media screen and (min-width: 1650px) {
+  .aa-cards {
+    position: relative;
+    width: 100%;
+    height: 730px;
+    align-items: flex-end;
+    /* border-bottom: 3px var(--th-brn) solid; */
+    /* border: 1px red solid; */
+  }
+
+  .aac:first-child {
+    left: 0;
+    width: 31vw;
+    height: 475px;
+    padding-right: var(--mb-5);
+    background-color: var(--cannoli-cream);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .aac:nth-child(2) {
+    left: 59%;
+    transform: translate(-50%, 0);
+    width: 40vw;
+    height: 670px;
+    padding-right: var(--mb-7);
+    margin-left: -6rem;
+    z-index: 3;
+    background-color: var(--the-grey);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .aac:last-child {
+    right: 0;
+    width: 35vw;
+    height: 340px;
+    margin-left: -10rem;
+    z-index: 4;
+    background-color: var(--th-bge);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .aac > span {
+    font-size: var(--fs-3);
+    /* color: var(--soft-black); */
+    color: var(--th-grn);
+  }
+
+  .aac h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--soft-black);
+    color: var(--th-brn);
+    line-height: 1;
+  }
+
+  /* .aac:nth-child(3) h3 {
+  color: var(--white);
+} */
+
+  .aac p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--txt-grey);
+    line-height: 1.7;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
