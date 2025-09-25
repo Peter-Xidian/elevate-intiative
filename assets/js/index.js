@@ -359,13 +359,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add click event to the first .gc element
-  if (firstGc) {
-    firstGc.addEventListener("click", function () {
-      // Remove active class from cards and add to details
-      gimCards.classList.remove("active");
-      gimDetails.classList.add("active");
-    });
-  }
+  // if (firstGc) {
+  //   firstGc.addEventListener("click", function () {
+  //     // Remove active class from cards and add to details
+  //     gimCards.classList.remove("active");
+  //     gimDetails.classList.add("active");
+  //   });
+  // }
 
   // Add click event to the go back button
   if (gidAction) {
