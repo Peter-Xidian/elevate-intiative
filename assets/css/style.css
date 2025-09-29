@@ -837,8 +837,8 @@
 }
 
 .ctc h3 {
-  width: 70%;
-  font-size: 4rem;
+  width: 80%;
+  font-size: 6vw;
   font-weight: 300;
   font-family: var(--pop-font);
   text-align: center;
@@ -866,7 +866,7 @@
   width: 100%;
   padding: 0;
   background-color: var(--white);
-  padding: var(--mb-6) var(--mb-6);
+  padding: var(--mb-6);
 }
 
 .fq-container {
@@ -1555,7 +1555,7 @@
 
 .ce-title h1 {
   width: 100%;
-  font-size: 11vw;
+  font-size: 11.25vw;
   font-weight: 300;
   text-align: center;
   /* color: var(--th-brn); */
@@ -2956,6 +2956,68 @@
     text-align: left;
     color: var(--txt-grey);
     line-height: 1.7;
+  }
+
+  /* --------------- ========== AB-MAIN ========== ---------------*/
+  .ab-main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /*========== >>>>> AERO SECTION <<<<< ==========*/
+  .ae-title p {
+    width: 60%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .ae-media {
+    width: 100%;
+    /* border: 1px teal solid; */
+  }
+  .aem {
+    flex: 0 0 550px;
+    height: 550px;
+    border-radius: 50%;
+    background-color: var(--soft-white);
+    border: 10px var(--soft-white) solid;
+    margin-left: -3.5rem;
+    overflow: hidden;
+  }
+
+  /*========== >>>>> FAQ SECTION <<<<< ==========*/
+  .faq {
+    width: 100%;
+    padding: 0;
+    background-color: var(--white);
+    padding: 10rem;
+  }
+
+  /* --------------- ========== SE-MAIN || SERVICES/CAUSES PAGE ========== ---------------*/
+  .se-main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /*========== >>>>> SERVICES - LISTING SECTION <<<<< ==========*/
+  .sl {
+    width: 100%;
+  }
+
+  .sl-container {
+    width: 100%;
+    justify-content: flex-start;
+    row-gap: var(--mb-4);
+  }
+
+  .sl-wrapper {
+    column-gap: unset;
+    justify-content: space-between;
+  }
+
+  .slw {
+    flex: 0 0 32%;
+    height: 663px;
   }
 }
 
